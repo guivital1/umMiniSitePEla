@@ -1,0 +1,52 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4B5320; /* Verde militar */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container central */
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #3B4220; /* Tom mais escuro do verde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Contador */
+.contador {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* Suavidade no efeito */
+}
+
+.contador.pulsar {
+    animation: pulsar 0.6s ease-in-out;
+}
+
+/* Animação de pulsar */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta 10% do tamanho */
+    }
+    100% {
+        transform: scale(1);
+    }
+}

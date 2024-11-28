@@ -1,0 +1,98 @@
+:root{
+    --bg-clr: #f6f7f9;
+    --light-clr: rgb(250,133,250);
+    --ls-side-clr: rgb(192,48,192);
+    --ls-clr: #6e0d5e;
+    --br-clr: #181818;
+    --ls-hv-clr: #fffcfb;
+    --ls-hv-dark-clr: #c5097a;
+    --shadow-clr: #e1e1e1;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-clr);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.container > ul{
+    position: relative;
+    transform: rotate(-35deg) skew(20deg,5deg);
+}
+.list-item{
+    list-style: none;
+    background: var(--light-clr);
+    color: var(var(--ls-clr));
+    text-align: center;
+    height: 40px;
+    width: 64px;
+    line-height: 40px;
+    border-bottom: 1px solid var(--br-clr);
+    position: relative;
+    box-shadow: -32px 24px 0 var(--shadow-clr);
+    transition: all 0.25s linear;
+}
+
+.list-item:hover{
+    background: var(--ls-hv-dark-clr);
+    color: var(--ls-hv-clr);
+    transform: translate(14px, -14px);
+    box-shadow: -32px 32px 0 var(--shadow-clr);
+    transition: all 0.25 linear;
+    cursor: pointer;
+}
+
+.list-item::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 40px;
+    background: var(--ls-side-clr);
+    left: -8px;
+    top: 4px;
+    transform: skewY(-45deg);
+    transform: all 0.25s linear;
+
+
+}
+
+.list-item::after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 64px;
+    background: var(--ls-side-clr);
+    bottom: -36px;
+    left: 24px;
+    transform: rotate(90deg) skew(0,45deg);
+    transition: all 0.25s linear;
+}
+.list-item::before:hover{
+    background: var(--ls-hv-dark-clr);
+    width: 16px;
+    top: 8px;
+    left: -16px;
+    transition: all 0.25s linear;
+}
+
+.list-item:hover::after{
+    background: var(--ls-hv-dark-clr);
+    width: 16px;
+    height: 64px;
+    left: 16px;
+    bottom: -40px;
+    transition: all 0.25s linear;
+
+}

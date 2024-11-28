@@ -1,0 +1,51 @@
+body {
+    background-color:rgb(5, 53, 61);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que o painel fique centralizado verticalmente */
+}
+
+.painel {
+    width: 500px;
+    height: auto; /* Ajusta automaticamente a altura do painel */
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px; /* Espaçamento interno adicional */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra ao painel */
+}
+
+img {
+    max-width: 100%; /* Ajusta o tamanho do GIF à largura do painel */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaço entre o GIF e os botões */
+}
+
+/* Container para os botões */
+.botao-container {
+    display: flex; /* Usa Flexbox para alinhar os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 15px; /* Espaço entre os botões */
+}
+
+#sim,
+#nao {
+    height: 40px;
+    width: 80px; /* Botões um pouco maiores para melhor estética */
+    background-color: red;
+    border: none; /* Remove borda */
+    border-radius: 10px;
+    color: white;
+    cursor: pointer; /* Mostra cursor de clique */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+#sim:hover,
+#nao:hover {
+    background-color: darkred; /* Muda a cor ao passar o mouse */
+}
